@@ -1,10 +1,11 @@
 # Ejercicios-de-matrices-ADA
-# Complejidad del Primer Algoritmo
+# Ejercicio 1: Suma de la Diagonal Principal y Secundaria
 
-El algoritmo realiza dos tareas principales: 
+Dada una matriz cuadrada `m` de números enteros de dimensión `d`, el objetivo de este ejercicio es calcular la suma de los elementos de:
 
-1. Leer la matriz y calcular las sumas de las diagonales.
-2. Mostrar la matriz.
+- **Diagonal principal** (de la esquina superior izquierda a la esquina inferior derecha).
+- **Diagonal secundaria** (de la esquina superior derecha a la esquina inferior izquierda).
+
 
 ## Complejidad Temporal
 
@@ -25,3 +26,34 @@ El algoritmo realiza dos tareas principales:
 
 - **Complejidad Temporal**: `O(n^2)`
 - **Complejidad Espacial**: `O(n^2)`
+### Función sumarAnillo
+Java
+public static int sumarAnillopre(int[][] matriz, int d, int k) {
+        int suma = 0;
+        int inicio = k;
+        int fin = d - k - 1;
+
+        /* Borde superior */
+        for (int i = inicio; i <= fin; i++) {
+            suma += matriz[inicio][i];
+        }
+
+        /* Borde derecho */
+        for (int i = inicio + 1; i <= fin; i++) {
+            suma += matriz[i][fin];
+        }
+
+        /* Borde inferior*/
+        for (int i = fin - 1; i >= inicio; i--) {
+            suma += matriz[fin][i];
+        }
+
+        /* Borde izquierdo*/
+        for (int i = fin - 1; i > inicio; i--) {
+            suma += matriz[i][inicio];
+        }
+
+        return suma;
+    }
+}
+# Complejidad del Segundo Algoritmo
