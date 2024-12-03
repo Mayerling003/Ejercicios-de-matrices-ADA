@@ -5,7 +5,40 @@ Dada una matriz cuadrada `m` de números enteros de dimensión `d`, el objetivo 
 
 - **Diagonal principal** (de la esquina superior izquierda a la esquina inferior derecha).
 - **Diagonal secundaria** (de la esquina superior derecha a la esquina inferior izquierda).
+- ### Función sumarAnillo
+Java
+public class ejer1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Dimension de la matriz: ");
+        int n = sc.nextInt();
+        int[][] m = new int[n][n];
 
+        System.out.println("Ingrese los elementos:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                m[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Matriz ingresada:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        int sp = 0, ss = 0;
+        for (int i = 0; i < n; i++) {
+            sp += m[i][i];          
+            ss += m[i][n - 1 - i];  
+        }
+
+        System.out.println("Suma diagonal principal: " + sp);
+        System.out.println("Suma diagonal secundaria: " + ss);
+    }
+}
 
 ## Complejidad Temporal
 
@@ -27,4 +60,46 @@ Dada una matriz cuadrada `m` de números enteros de dimensión `d`, el objetivo 
 - **Complejidad Temporal**: `O(n^2)`
 - **Complejidad Espacial**: `O(n^2)`
 
-# Complejidad del Segundo Algoritmo
+# Ejercicio 2: Rotación de una matriz 90°
+Dada una matriz cuadrada mmm de dimensión ddd, escribe un algoritmo que permita rotar la matriz 90° en el sentido de las agujas del reloj. 
+### Función sumarAnillo
+Java
+public class ejer2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Dimensión de la matriz: ");
+        int n = sc.nextInt();
+        int[][] m = new int[n][n];
+        System.out.println("Ingrese los elementos:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                m[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Matriz original:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        int[][] r = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                r[j][n - 1 - i] = m[i][j];
+            }
+        }
+
+        System.out.println("Matriz rotada 90°:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(r[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
