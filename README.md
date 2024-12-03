@@ -1,11 +1,11 @@
 # Ejercicios-de-matrices-ADA
-# Ejercicio 1: Suma de la Diagonal Principal y Secundaria
+# Ejercicio 1: 
 
 Dada una matriz cuadrada `m` de números enteros de dimensión `d`, el objetivo de este ejercicio es calcular la suma de los elementos de:
 
 - **Diagonal principal** (de la esquina superior izquierda a la esquina inferior derecha).
 - **Diagonal secundaria** (de la esquina superior derecha a la esquina inferior izquierda).
-- ### Función sumarAnillo
+- ### Suma de la Diagonal Principal y Secundaria
 Java
 public class ejer1 {
     public static void main(String[] args) {
@@ -60,9 +60,9 @@ public class ejer1 {
 - **Complejidad Temporal**: `O(n^2)`
 - **Complejidad Espacial**: `O(n^2)`
 
-# Ejercicio 2: Rotación de una matriz 90°
+# Ejercicio 2: 
 Dada una matriz cuadrada mmm de dimensión ddd, escribe un algoritmo que permita rotar la matriz 90° en el sentido de las agujas del reloj. 
-### Función sumarAnillo
+### Rotación de una matriz 90°
 Java
 public class ejer2 {
     public static void main(String[] args) {
