@@ -26,34 +26,5 @@ Dada una matriz cuadrada `m` de números enteros de dimensión `d`, el objetivo 
 
 - **Complejidad Temporal**: `O(n^2)`
 - **Complejidad Espacial**: `O(n^2)`
-### Función sumarAnillo
-Java
-public static int sumarAnillopre(int[][] matriz, int d, int k) {
-        int suma = 0;
-        int inicio = k;
-        int fin = d - k - 1;
 
-        /* Borde superior */
-        for (int i = inicio; i <= fin; i++) {
-            suma += matriz[inicio][i];
-        }
-
-        /* Borde derecho */
-        for (int i = inicio + 1; i <= fin; i++) {
-            suma += matriz[i][fin];
-        }
-
-        /* Borde inferior*/
-        for (int i = fin - 1; i >= inicio; i--) {
-            suma += matriz[fin][i];
-        }
-
-        /* Borde izquierdo*/
-        for (int i = fin - 1; i > inicio; i--) {
-            suma += matriz[i][inicio];
-        }
-
-        return suma;
-    }
-}
 # Complejidad del Segundo Algoritmo
