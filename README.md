@@ -6,7 +6,7 @@ Dada una matriz cuadrada `m` de números enteros de dimensión `d`, el objetivo 
 - **Diagonal principal** (de la esquina superior izquierda a la esquina inferior derecha).
 - **Diagonal secundaria** (de la esquina superior derecha a la esquina inferior izquierda).
 - ### Suma de la Diagonal Principal y Secundaria
-Java
+```Java
 public class ejer1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -38,7 +38,7 @@ public class ejer1 {
         System.out.println("Suma diagonal principal: " + sp);
         System.out.println("Suma diagonal secundaria: " + ss);
     }
-}
+} ```
 
 ## Complejidad Temporal
 
@@ -63,7 +63,7 @@ public class ejer1 {
 # Ejercicio 2: 
 Dada una matriz cuadrada mmm de dimensión ddd, escribe un algoritmo que permita rotar la matriz 90° en el sentido de las agujas del reloj. 
 ### Rotación de una matriz 90°
-Java
+```Java
 public class ejer2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -100,13 +100,10 @@ public class ejer2 {
             System.out.println();
         }
     }
-}
+} ```
 ## Complejidad total:
 Cada una de estas operaciones (entrada, impresión, rotación e impresión) tiene una complejidad de O(n²). Dado que no hay operaciones anidadas dentro de cada bloque (los bucles están secuenciales), la complejidad total sigue siendo O(n²), ya que cada operación individual tiene la misma complejidad.
 
 La complejidad total del programa es O(n²) debido a los bucles anidados que recorren la matriz de 
-𝑛
-×
-𝑛
-n×n en varias etapas del proceso.
+𝑛×𝑛 varias etapas del proceso.
 
