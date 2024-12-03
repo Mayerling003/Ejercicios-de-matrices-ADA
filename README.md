@@ -1,49 +1,25 @@
 # Ejercicios-de-matrices-ADA
-# Complejidad del Algoritmo
+# Complejidad del Primer Algoritmo
 
-Este algoritmo realiza operaciones sobre una matriz de tamaño `n x n`, con las siguientes tareas principales:
+El algoritmo realiza dos tareas principales: 
 
-1. Lectura de la matriz y cálculo de las sumas de las diagonales.
+1. Leer la matriz y calcular las sumas de las diagonales.
 2. Mostrar la matriz.
 
-## 1. Complejidad Temporal
+## Complejidad Temporal
 
-### a. Lectura de los Elementos de la Matriz
-Se realiza un ciclo anidado que recorre todos los elementos de la matriz. Dado que la matriz es de tamaño `n x n`, la complejidad es:
+- **Lectura de la matriz**: Recorre todos los elementos con un ciclo anidado, por lo que la complejidad es `O(n^2)`.
+- **Cálculo de sumas de las diagonales**: Solo se recorre la matriz una vez, con complejidad `O(n)`.
+- **Mostrar la matriz**: Se recorre nuevamente todos los elementos con complejidad `O(n^2)`.
 
-- **Complejidad**: `O(n^2)`
+**Complejidad total**: `O(n^2)` (dominado por la lectura y visualización de la matriz).
 
-### b. Cálculo de las Sumas de las Diagonales
-Se recorre la matriz una vez con un solo ciclo que va de `0` a `n - 1`. Por lo tanto, esta operación tiene complejidad:
+## Complejidad Espacial
 
-- **Complejidad**: `O(n)`
+- **Matriz**: Se necesita espacio para una matriz de `n x n`, lo que requiere `O(n^2)` de espacio.
+- **Variables auxiliares**: Solo se usan algunas variables como `sp`, `ss`, `i`, `j`, lo cual es `O(1)`.
 
-### c. Mostrar la Matriz
-De nuevo, se recorre todos los elementos de la matriz con un ciclo anidado. Esto tiene una complejidad de:
-
-- **Complejidad**: `O(n^2)`
-
-### d. Complejidad Total Temporal
-La operación dominante es la lectura y visualización de los elementos, ambas con complejidad `O(n^2)`. Por lo tanto, la complejidad temporal total del algoritmo es:
-
-- **Complejidad Total**: `O(n^2)`
-
-## 2. Complejidad Espacial
-
-### a. Matriz
-El algoritmo utiliza una matriz de `n x n`, lo que requiere espacio adicional de:
-
-- **Complejidad**: `O(n^2)`
-
-### b. Variables Auxiliares
-Solo se utilizan unas pocas variables auxiliares (`sp`, `ss`, `i`, `j`), lo cual es constante:
-
-- **Complejidad**: `O(1)`
-
-### c. Complejidad Total Espacial
-La complejidad espacial total es dominada por el espacio requerido para la matriz:
-
-- **Complejidad Total**: `O(n^2)`
+**Complejidad total**: `O(n^2)` (dominado por la matriz).
 
 ## Conclusión
 
