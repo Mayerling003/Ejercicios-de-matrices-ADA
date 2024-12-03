@@ -101,5 +101,12 @@ public class ejer2 {
         }
     }
 }
+## Complejidad total:
+Cada una de estas operaciones (entrada, impresión, rotación e impresión) tiene una complejidad de O(n²). Dado que no hay operaciones anidadas dentro de cada bloque (los bucles están secuenciales), la complejidad total sigue siendo O(n²), ya que cada operación individual tiene la misma complejidad.
 
+La complejidad total del programa es O(n²) debido a los bucles anidados que recorren la matriz de 
+𝑛
+×
+𝑛
+n×n en varias etapas del proceso.
 
